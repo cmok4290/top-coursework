@@ -1,93 +1,86 @@
-# Ruby Programming
-OBJECT ORIENTED PROGRAMMING
+# Object Oriented Programming
+
 ## Learning Outcomes
 
 ### Classes and Methods:
 - What is an implicit return?
--- The return value of the last evaluated expression
-
+    - The return value of the last evaluated expression
 - What is a class?
--- A class is just a way of organizing and producing objects with similar attributes and methods.
--- Basic outlines of what an object should be makde of and what it should be able to do.
--- A class can be thought of as a factory that makes objects.
-
+    - A class is just a way of organizing and producing objects with similar attributes and methods
+    - Basic outlines of what an object should be makde of and what it should be able to do
+    - A class can be thought of as a factory that makes objects
 - When should you use a class?
--- When you want to manipulate data of objects with similar and complex structure
-
+    - When you find that you want to run the same methods on a bunch of different objects
+    - When you want to manipulate data of objects with similar and complex structure
+    - When you need something to exist over time
 - How do you create a class in your script file?
--- ``` class NewClass
-        # Class magic here
-       end
-   ```
+    - You create a class using the `class` keyword
 - What is an instance of a class?
--- An object is an instance of a class.
-
+    - An object is an instance of a class
 - What is the difference between Pascal Case and snake_case styles of naming?
--- Pascal case formatting is created using no spaces and capitalizes every word
--- snake_case formatting is created using all lowercase letters and separating words with the underscore character
-
+    - Pascal case formatting is created using no spaces and capitalizes every word
+    - snake_case formatting is created using all lowercase letters and separating words with the underscore character
 - How do you instantiate a class?
--- You instantiate a class by using the `class` keyword
-
+    - You instantiate a class by using the `::new` method
 - How do you set the state of your new instance?
--- You can set up your object's state in the `#initialize` method
-
+    - You can set up your object's state in the `#initialize` method
 - What should be done in the #initialize method?
--- You should designate instance variables e.g. `@variable_name`
-
+    - You should designate instance variables e.g. `@variable_name`
 - What is a class method?
--- A class method is a method called on the class
-
+    - A class method is a method called on the class
 - How is a class method different from an instance method?
--- A class method isn't called on the specific instance of that class
-
+    - A class method isn't called on the specific instance of that class
 - How are methods you already know like #count or #sort, etc. instance methods?
--- These methods are called on an individual instance of that class
-
+    - These methods are called on an individual instance of that class
 - What's the difference between how you declare a class method vs an instance method?
--- You declare a class method preceding its name with `self`, name of the class, or `class << self` 
-
+    - You declare a class method preceding its name with `self`, name of the class, or `class << self` 
 - What's the difference between how you call a class method vs an instance method?
-
+    - Class methods are invoked with the class name whereas instance methods are invoked with the instance name
 - What is an instance variable?
--- Instance variable store the object's state or data
-
+    - Instance variable store the object's state or data
 - What's the difference between an `instance` variable and a `regular` variable?
-
+    - `instance` variables are only accessible during the lifetime of the `instance`
 - What are `getter` and `setter` methods used for?
-
+    - `getter` methods are used to retrieve the `instance` variable value
+    - `setter` methods are used to modify the `instance` variable value
 - How do you make instance variables readable outside your class? Writeable? Both at the same time?
-
+    - To make `instance` variables readable outside your class, you would use `attr_reader`
+    - To make `instance` variables writeable outside your class, you would use `attr_writer`
+    - To make `instance` variables accessible in both ways, you would use `attr_accessor`
 - Can a class call its own class methods?
-
+    - Yes, when you want something like preset features or a utility method
 - What's the difference between when you would use a class variable and when you would use a constant?
-
+    - A `class` variable is used is when you want something accessible from all instances of that class
+    - A `constant` variable is used when you want a variable that never changes
 - What's the difference between a class and a module?
-
+    - A `class` defines an object with methods whereas a `module` can only be a library of methods
 - When would you use a class but not a module?
-
+    - When you want state via `instance` variables and multiple objects of the same class
 - How does inheritance work?
-
+    - Inheritance gives a child class access to the parent class methods and variables
 - Why is inheritance really useful?
-
+    - Inheritance is a design pattern that reuses code within classes
 - How do you extend a class? What does that mean?
-
+    - You extend a class with the `<` notation e.g. `class Child < Parent`
+    - This means the child belongs to that parent having access to their methods and variables
 - What does `#super` do? Why use it?
-
+    - `#super` is the method that accesses the parent's attributes and methods
+    - This lets you reuse existing methods and variables within the parent class or superclass
+    
 ## Scope:
 - What is scope?
-
+    - Scope is a term that defines whether you have access to a variable or method
 - When can you start using a variable?
-
+    - When it is `in scope`, typically anything `downstream` in code until the current scope is exited e.g. leaving a method or loop
 - When is a new scope defined?
-
+    - When you first define a variable
 - When are methods in scope?
-
+    - After the ruby interpreter has had a chance to define it
 - What is a private method?
-
+    - `private` methods are only accessible by other methods within that class
 - What is a protected method?
-
+    - `protected` methods are accessible by other instances of the same class
 - How are private and protected methods different?
-
+    - `private` methods restrict access to the class and `protected` methods are the same but extends access to the instances
 - What does `encapsulation` mean?
-
+    - `encapsulation` is a design approach that hides functionality and protects data while exposing interfaces for intended actions
